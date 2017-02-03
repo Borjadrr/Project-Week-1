@@ -39,6 +39,7 @@ MinesWeeper.prototype.createCoords = function(){
     });
   });
   return newBoard;
+
 };
 
 MinesWeeper.prototype.getRandomPosition = function () {
@@ -46,8 +47,13 @@ var minesArray = [];
   do{
     var x = Math.floor(Math.random()*this.coordBoard.length);
     minesArray.push(this.coordBoard[x]);
+    this.coordBoard.splice(x,1);
+    }
+  while(minesArray.length < this.minesNumber);
+    return minesArray;
 
-    for (var i= 0; i<minesArray.length;i++) {
+    //for (var i= 0; i<minesArray.length;i++) {
+/*
       if (minesArray[0]===minesArray[i+1]){
         minesArray.slice(i,1);
       }
@@ -78,15 +84,17 @@ var minesArray = [];
       else if(minesArray[9]===minesArray[i]){
         minesArray.slice(i,1);
       }
-      }
-        }
-  while(minesArray.length < this.minesNumber);
-  return minesArray;
+      */
+      //}
+
+
 };
 
 MinesWeeper.prototype.setMines = function (){
   for (j=0; j< this.minesPosition.length; j++){
+
     this.board[this.minesPosition[j].row][this.minesPosition[j].col] = "b";
+
   }
 };
 
@@ -198,6 +206,7 @@ $(".cell").on("click", function(){
         var img = document.createElement("img");
         img.src = "images/bomb.png";
         document.getElementById("MinesweeperBoard").getElementsByClassName("row")[minePosition.row].getElementsByClassName("cell")[minePosition.col].insertAdjacentHTML('afterbegin', '<img id="theImg" src="images/bomb.png">');
+
       }
     });
   }
