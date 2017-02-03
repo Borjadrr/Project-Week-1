@@ -1,0 +1,109 @@
+.game-board{
+  background-color: grey;
+  background: rgba(225, 226, 241, 0.5);
+  width: 360px;
+  height: 430px;
+  border: 1px solid black;
+}
+
+
+.header{
+  margin: 20px;
+  height: 60px;
+  position: relative;
+  text-align: center;
+}
+.flagNumber{
+width: 70px;
+height: 50px;
+color: red;
+background-color: black;
+float: left;
+}
+
+.restart{
+  width: 70px;
+  height: 50px;
+  background-color: grey;
+  float: left;
+  margin-left: 65px;
+}
+
+#smile {
+width: 60px;
+height: 50px;
+bottom: 10px;
+
+}
+
+.chronometer{
+  width: 70px;
+  height: 50px;
+  color: red;
+  background-color: black;
+  float: right;
+}
+
+strong{
+  font-size: 200%;
+  margin-top: 40px;
+}
+.chronometer{
+  font-size: 200%;
+
+}
+
+
+#MinesweeperBoard {
+  margin: 20px;
+
+}
+
+.row {
+  height: 100%;
+  width: 100%;
+}
+
+.cell {
+  background:rgba(225, 226, 241, 0.5);
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+  float: left;
+  width: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  }
+  .cell:hover {
+    background: rgba(225, 226, 231, 1);
+  }
+  .cell > span {
+    visibility: hidden;
+  }
+  .visible {
+    background: rgba(225, 226, 241, 0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 40px;
+    float: left;
+    width: 40px;
+    border: 1px solid black;
+
+    }
+
+  span {
+    margin-left: 10px;
+    font-size: 30px;
+    background: rgba(225, 226, 241, 0.5);
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  img {
+    
+    width: 38px;
+    height: 38px;
+  }
